@@ -8,10 +8,6 @@ const { MongoClient, ObjectId } = require('mongodb');
 const url = "mongodb://127.0.0.1:27017"
 const dbName = 'LaFesti'
 
-
-
-
-
 // router.get("/", function (req, res) {
 //     res.send("Hello!! THERE")
 // })
