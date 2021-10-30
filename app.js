@@ -32,7 +32,7 @@ app.use('/profile',profile)
 
 app.get('*', (req, res) => {
 
-    res.sendFile(path.join(__dirname + '/dist/app/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/LaFesti/index.html'));
 
 })
 
