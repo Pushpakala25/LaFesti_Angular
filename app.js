@@ -29,6 +29,11 @@ app.use('/pay',pay)
 app.use('/track',track)
 app.use('/profile',profile)
 
+app.get('*', (req, res) => {
+
+    res.sendFile(path.join(__dirname + '/dist/app/index.html'));
+
+})
 
 server.listen(port, function () {
     console.log(" running 2555")
