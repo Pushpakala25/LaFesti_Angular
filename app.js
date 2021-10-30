@@ -7,10 +7,12 @@ app.use(express.json());
 
 const cors =  require("cors")
 app.use(cors())
+
 var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/dist/app'))
 let server = require('http').Server(app);
 var path = require('path');
+const pathDeploy = path.join(__dirname,'dist','LaFesti');
 
 let login = require('./routes/login')
 let rest = require('./routes/restaurants')
@@ -31,9 +33,9 @@ app.use('/track',track)
 app.use('/profile',profile)
   
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
 
-    res.sendFile(path.join(__dirname + '/dist/LaFesti/index.html'));
+    res.sendFile(path.join(pathDeploy,'index.html'));
 
 })
 
