@@ -19,7 +19,7 @@ export class CartService {
   }
 
   getdis() {
-    return this.http.get('http://localhost:2555/getCart/testingall' );
+    return this.http.get('/getCart/testingall' );
   }
 
  

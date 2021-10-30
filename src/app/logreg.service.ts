@@ -8,16 +8,16 @@ export class LogregService {
 
   constructor(public http:HttpClient) { }
   adduser(newuser:any) {
-    return this.http.post('http://localhost:2555/logreg/register', newuser);
+    return this.http.post('/logreg/register', newuser);
   }
 
   getusers() {
-    return this.http.get('http://localhost:2555/logreg/loginuser');
+    return this.http.get('/logreg/loginuser');
   }
   forgotpassword(info:any){
-    return this.http.put(`http://localhost:2555/logreg/forgotpassword/${info._id}`, info);
+    return this.http.put(`/logreg/forgotpassword/${info._id}`, info);
   }
   addaddress(address:any) {
-    return this.http.post('http://localhost:2555/logreg/address', address);
+    return this.http.post('/logreg/address', address);
   }
 }

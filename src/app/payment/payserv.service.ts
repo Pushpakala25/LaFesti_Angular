@@ -11,7 +11,7 @@ export class PayservService {
 
 
   addpay(paymentdet:any) {
-    return this.http.post('http://localhost:2555/pay/payment', paymentdet);
+    return this.http.post('/pay/payment', paymentdet);
   }
 
   
