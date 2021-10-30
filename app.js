@@ -10,6 +10,7 @@ app.use(cors())
 var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/dist/app'))
 let server = require('http').Server(app);
+var path = require('path');
 
 let login = require('./routes/login')
 let rest = require('./routes/restaurants')
