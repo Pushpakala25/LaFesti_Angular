@@ -7,6 +7,9 @@ app.use(express.json());
 
 const cors =  require("cors")
 app.use(cors())
+var port = process.env.PORT || 8080;
+app.use(express.static(__dirname + '/dist/app'))
+let server = require('http').Server(app);
 
 let login = require('./routes/login')
 let rest = require('./routes/restaurants')
@@ -27,6 +30,6 @@ app.use('/track',track)
 app.use('/profile',profile)
 
 
-app.listen(2555, function () {
+server.listen(port, function () {
     console.log(" running 2555")
 })
