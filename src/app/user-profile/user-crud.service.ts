@@ -8,12 +8,12 @@ export class UserCrudService {
 
   constructor(public http:HttpClient) { }
   getListOne(id:any){
-    return this.http.get(`http://localhost:2555/profile/data/${id}`)
+    return this.http.get(`/profile/data/${id}`)
   }
   getUpdate(user:any){
-    return this.http.put(`http://localhost:2555/profile/update/${user._id}`,user)
+    return this.http.put(`/profile/update/${user._id}`,user)
   }
  getFoodOne(id:any){
-  return this.http.get(`http://localhost:2555/menu/view/${id._id}`)
+  return this.http.get(`/menu/view/${id._id}`)
 }
 }

@@ -8,7 +8,7 @@ export class TrackingService {
 
   constructor(public http : HttpClient) { }
   addComment(x: any) {
-    return this.http.post<any>('http://localhost:2555/track/addFeedback', x);
+    return this.http.post<any>('/track/addFeedback', x);
     console.log(x);
   }
 }

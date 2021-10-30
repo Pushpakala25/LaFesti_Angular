@@ -10,32 +10,32 @@ export class RestaurantsService {
   
   getData()
   {
-    let url="http://localhost:2555/rest/restaurant";
+    let url="/rest/restaurant";
     return this.http.get(url);
   }
 
   getDataByDeliveryTime () {
-    let url="http://localhost:2555/rest/restaurant/deliveryTime";
+    let url="/rest/restaurant/deliveryTime";
     return this.http.get(url);
   }
 
   getDataByCuisines() {
-    let url="http://localhost:2555/rest/restaurant/Cuisines";
+    let url="/rest/restaurant/Cuisines";
     return this.http.get(url);
   }
 
   getDataByReviews() {
-    let url="http://localhost:2555/rest/restaurant/Reviews";
+    let url="/rest/restaurant/Reviews";
     return this.http.get(url);
   }
 
   getDataByRating() {
-    let url="http://localhost:2555/rest/restaurant/Rating";
+    let url="/rest/restaurant/Rating";
     return this.http.get(url);
   }
 
   filterByVegOnly(){
-    let url="http://localhost:2555/rest/restaurant/VegOnly";
+    let url="/rest/restaurant/VegOnly";
     return this.http.get(url);
   }
 
